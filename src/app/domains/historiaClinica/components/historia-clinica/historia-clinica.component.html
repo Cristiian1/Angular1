@@ -1,0 +1,33 @@
+<!-- Botón para abrir el modal -->
+<li class="nav-item">
+  <a class="nav btn btn-warning btn-lg" href="#" data-bs-toggle="modal" data-bs-target="#mental">
+      <i class="bx bxs-brain fs-4"></i> MENTAL
+  </a>
+</li>
+
+<!-- Modal para el Examen Mental -->
+<div class="modal fade" id="mental" tabindex="-1" aria-labelledby="mentalModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title text-center" id="mentalModalLabel">Examen Mental</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <!-- Iteración sobre los datos de examenMentall -->
+              <ng-container *ngFor="let item of examenMentall">
+                  <textarea class="form-control" rows="5" placeholder="Evaluación como profesional, estado de la memoria, conciencia, lenguaje, sueño, etc.">{{item.examen_mental}}</textarea>
+              </ng-container>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <!-- Agrega los botones de acción según tus necesidades -->
+              <button type="button" class="btn btn-primary">Eliminar</button>
+              <button type="button" class="btn btn-primary">Modificar</button>
+      
+              <!-- Agrega un botón para guardar los cambios -->
+              <button type="button" class="btn btn-primary" (click)="guardarCambios()">Guardar</button>
+          </div>
+      </div>
+  </div>
+</div>
