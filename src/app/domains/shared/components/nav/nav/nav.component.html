@@ -1,9 +1,10 @@
+
 <header>
   <div class="container">
       <div class="row">
           <div class="col-md-3 col-sm-3 col-3">
               <div class="logo">
-                  <img src="assets/logofinal.png" class="logo" style="margin-top: 35px;">
+                  <img src="assets/logofinal.png" routerLink= "/home" class="logo" style="margin-top: 35px;">
               </div>
           </div>
           <div class="col-md-9 col-sm-9 col-9 text-end">
@@ -12,11 +13,9 @@
               </div>
               <div class="desktop_menu" [class.mobile_menu]="menuValue">
                   <ul>
-                      <li (click)="closeMenu()">Inicio</li>
+                      <li (click)="closeMenu()" routerLink= "/home" > Inicio </li>
 
-
-
-                      <li (click)="closeMenu()">Acerca de </li>
+                      <li (click)="closeMenu()" routerLink= "/about">Acerca de</li>
 
 
                       <li class="nav-item dropdown">
@@ -24,12 +23,12 @@
                             Categorias
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="/categorias/Autoestima.html">Autoestima</a></li>
-                          <li><a class="dropdown-item" href="/categorias/amor propio.html">Amor propio</a></li>
-                          <li><a class="dropdown-item" href="/categorias/Autoconfianza.html">Autoconfianza</a></li>
+                          <li><a class="dropdown-item" routerLink= "/autoestima">Autoestima</a></li>
+                          <li><a class="dropdown-item" routerLink= "/amorpropio">Amor propio</a></li>
+                          <li><a class="dropdown-item" routerLink= "/autoconfianza">Autoconfianza</a></li>
                         </ul>
                       </li>
-                      <li (click)="closeMenu()">Courses</li>
+                      <li (click)="closeMenu()" routerLink= "/profesionales">profesionales</li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Recursos
@@ -44,7 +43,7 @@
                         </ul>
                       </li>
 
-                      <li (click)="closeMenu()">Contact</li>
+                      <li (click)="closeMenu()">Contacto</li>
                   </ul>
               </div>
           </div>

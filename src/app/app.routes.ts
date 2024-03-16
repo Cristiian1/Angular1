@@ -26,9 +26,10 @@ export const routes: Routes = [
         component:LayoutComponent,
         children:[
             {
-                path:'',
+                path:'home',
                 component:HomeComponent
             },
+
             {
                 path:'listproduct',
                 component:ListComponent
@@ -45,7 +46,7 @@ export const routes: Routes = [
                 path:'product:/id',
                 component:ProductDetailComponent
             },
-        
+
             {
                 path:'list-historia',
                 component:ListHistoriaComponent
@@ -86,12 +87,12 @@ export const routes: Routes = [
                 path:'profesionales',
                 component:ProfesionalesComponent
             },
-        
-            
+
+
 
         ]
     },
- 
+
     {
         path:'login',
         component:LoginComponent
@@ -104,9 +105,9 @@ export const routes: Routes = [
         path:'**',
         component:NotFoundComponent
     },
-    
-    
 
-    
+
+
+
 
 ];

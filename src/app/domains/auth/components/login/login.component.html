@@ -5,24 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="/loginpsicol/css/login.css">
     <title>login</title>
 </head>
 
 <body>
-    <div class="container-form register">
+    <div class="container-form register" #registerForm>
         <div class="information">
             <div class="info-childs">
-                <img class="rotate-image" src="/loginpsicol/IMG/logofinal.png" alt="imagen-giratoria">
+                <img class="rotate-image" src="/assets/logofinal.png" alt="imagen-giratoria">
                 <h2>Bienvenido</h2>
                 <p>
-                   Tu bienestar emocional es importante para nosotros, este es un espacio creado para TI.
+                    Tu bienestar emocional es importante para nosotros, este es un espacio creado para TI.
                 </p>
-                <input type="button" value="Inciar Sesión" id="sign-in">
-            </div>
+                <input type="button" value="Iniciar Sesión" id="sign-in" #signInButton>
+              </div>
         </div>
 
-        
         <div class="form-information">
             <div class="form-information-childs">
                 <h2>Crear una cuenta</h2>
@@ -31,7 +30,7 @@
                     <a href="https://www.facebook.com/" class="bx bxl-facebook"></a>
                     <a href="https://www.instagram.com/" class="bx bxl-instagram"></a>
                 </div>
-                <form class="form" action="/loginpsicol/html/login.html">
+                <form class="form" #loginFormRef>
                     <label>
                         <i class="bx bx-user"></i>
                         <input type="text" placeholder="Nombre Completo">
@@ -44,35 +43,32 @@
                         <i class="bx bx-lock-alt"></i>
                         <input type="password" placeholder="Contraseña">
                     </label>
-                    <form action="/loginpsicol/html/login.html">
-                        <input type="submit" value="Registrarse">
-                    </form>
-                    
+                    <input type="submit" value="Registrarse">
                 </form>
             </div>
         </div>
-
     </div>
+
     <!-- segundo formulario -->
-    <div class="container-form login hide">
+    <div class="container-form login hide" #loginForm>
         <div class="information">
             <div class="info-childs">
-                <img class="rotate-image" src="/loginpsicol/IMG/logofinal.png" alt="imagen-giratoria">
+                <img class="rotate-image" src="/assets/logofinal.png" alt="imagen-giratoria">
                 <p>
                     Para fortalecer tu salud mental.
                 </p>
-                <input type="button"  value="Registrate" id="sign-up">
-            </div>
+                <input type="button" value="Registrarse" id="sign-up" #signUpButton>
+              </div>
         </div>
         <div class="form-information">
             <div class="form-information-childs">
-                <h2>Iniciar Sesion</h2>
+                <h2>Iniciar Sesión</h2>
                 <div class="icons">
                     <a href="https://www.google.com/" class="bx bxl-google-plus"></a>
                     <a href="https://www.facebook.com/" class="bx bxl-facebook"></a>
                     <a href="https://www.instagram.com/" class="bx bxl-instagram"></a>
                 </div>
-                <form class="form" action="/index.html">
+                <form class="form" #loginFormRef>
                     <label>
                         <i class="bx bxs-envelope"></i>
                         <input type="email" placeholder="Ingresa Correo Eletronico">
@@ -81,12 +77,12 @@
                         <i class="bx bx-lock-alt"></i>
                         <input type="password" placeholder="Contraseña">
                     </label>
-                    <input type="submit" formaction="/index.html" value="Iniciar Sesion">
+                    <input type="submit" value="Iniciar Sesion">
                 </form>
             </div>
         </div>
     </div>
-    <script src="/loginpsicol/js/login.js"></script>
 </body>
 
 </html>
+

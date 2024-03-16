@@ -1,204 +1,210 @@
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Times New Roman';
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(/assets/login1.jpg);
+    background-size: cover;
+}
+
+.container-form {
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+    height: 500px;
+    max-width: 900px;
+    transition: all 1s ease;
+    margin: 10px;
+}
+
+.information {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.info-childs {
+    width: 100%;
+    padding: 0 30px;
+}
+
+.rotate-image {
+    width: 100%;
+    height: auto;
+    animation: rotar 4s linear infinite;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotateY(180deg);
     }
-    
-    
-    body{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background-image: url(/loginpsicol/IMG/login1.jpg);
-        background-size: cover;
+    to {
+        transform: rotateY(-180deg);
     }
-    .container-form{
-        display: flex;
-        border-radius: 20px;
-        box-shadow: 0 5px 7px rgb(0, 0, 0, .1);
-        height: 500px;
-        max-width: 900px;
-        transition: all 1s ease;
-        margin: 10px;
+}
+
+.info-childs h2 {
+    font-size: 2.5rem;
+    color: #076d14;
+}
+
+.info-childs p {
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px 0;
+}
+
+.info-childs input {
+    background-color: #0767d4;
+    color: aliceblue;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.info-childs input:hover {
+    background-color: rgb(34, 99, 238);
+    border: none;
+    color: rgb(240, 243, 245);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.form-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-information-childs {
+    padding: 0 30px;
+}
+
+.form-information-childs h2 {
+    color: rgb(0, 89, 255);
+    font-size: 2rem;
+}
+
+.form-information-childs p {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(5, 5, 5);
+}
+
+.icons {
+    margin: 15px 0;
+}
+
+.icons a {
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 10px;
+    color: rgb(14, 60, 209);
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.icons a:hover {
+    background-color: rgba(31, 105, 242, 0.781);
+}
+
+.form {
+    margin: 30px 0 0 0;
+}
+
+.form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding: 0 10px;
+    background-color: rgb(226, 224, 228);
+    border: solid thin rgb(195, 195, 212);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.form label input {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(226, 224, 228);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #0e0f0e;
+}
+
+.form label i {
+    color: rgb(6, 80, 28);
+}
+
+.form input[type="submit"] {
+    background-color: #0767d4;
+    color: aliceblue;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.form input[type="submit"]:hover {
+    background-color: rgb(8, 80, 23);
+}
+
+.hide {
+    position: absolute;
+    transform: translateY(-300%);
+}
+
+/* responsive */
+@media screen and (max-width: 750px) {
+    html {
+        font-size: 12px;
     }
-    
-    .information{
-        width: 40%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        /* background-color: darkgreen; */
+}
+
+@media screen and (max-width: 580px) {
+    html {
+        font-size: 10px;
+    }
+
+    .container-form {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .information {
+        width: 100%;
+        padding: 20px;
         border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0;
+    }
+
+    .form-information {
+        width: 100%;
+        padding: 20px;
+        border-top-right-radius: 0;
         border-bottom-left-radius: 20px;
     }
-    .info-childs{
-        width: 100%;
-        padding: 0 30px;
-    
-    }
-    
-    .rotate-image {
-        width: 100%; /* Ajusta el ancho de la imagen según tus necesidades */
-        height: auto; /* Mantén la relación de aspecto */
-        animation: rotar 4s linear infinite; /* Aplica una animación de rotación infinita */
-      }
-      
-      @keyframes rotar{
-        from{
-          transform: rotateY(180deg);
-        }
-        to{
-          transform: rotateY(-180deg);
-        }
-      }
-      
-    .info-childs h2{
-        font-size: 2.5rem;
-        color: #076d14;
-    }
-    .info-childs p{
-        font-family: 'Montserrat', sans-serif; 
-        margin: 15px 0;
-    }
-    .info-childs input{
-        background-color: #0767d4;
-        color: aliceblue;
-        border-radius: 20px;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        margin-top: 10px;
-        box-shadow: 0 2px 5px rgb(0, 0, 0, .1);
-    }
-    .info-childs input:hover{
-        background-color: rgb(8, 80, 23);  
-        border: none;
-        color: rgb(240, 243, 245);
-        box-shadow: 0 2px 5px rgb(0, 0, 0, .1);
-    }
-    
-    .form-information{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        text-align: center;
-        /* background-color: aliceblue;  */
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-    
-    .form-information-childs{
-        padding: 0 30px;
-    
-    }
-    .form-information-childs h2{
-        color: rgb(0, 89, 255);
-        font-size: 2rem;
-    }
-    .form-information-childs p{ 
-        font-family: 'Montserrat', sans-serif; 
-        color: rgb(5, 5, 5);
-    }
-    
-    .icons{
-        margin: 15px 0;
-    }
-    .icons a{
-        border-radius:50%;
-        padding: 15px;
-        cursor: pointer;
-        margin: 0 10px;
-        color: rgb(17, 117, 8);
-        transition:  background-color 0.3s ease;
-        box-shadow: 0 2px 5px rgb(0, 0, 0, .1);
-    }
-    
-    .icons a:hover{
-        background-color: rgba(0, 89, 255, 0.781);
-    
-    }
-    
-    .form {
-    margin: 30px 0 0 0;
-    }
-    
-    .form label{
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        border-radius: 20px;
-        padding: 0 10px;
-        background-color: rgb(226, 224, 228);
-        border: solid thin rgb(195, 195, 212);
-        box-shadow: 0 2px 5px rgb(0, 0, 0, .1);
-    }
-    .form label input{
-        width: 100%;
-        padding: 10px;
-        background-color: rgb(226, 224, 228);
-        border: none;
-        outline: none;
-        border-radius: 20px;
-        color: #0e0f0e;
-        
-    }
-    .form label i{
-        color: rgb(6, 80, 28);
-    }
-    .form input[type="submit"]{
-        background-color: #0767d4;
-        color: aliceblue;
-        border-radius: 20px;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        margin-top: 10px;
-        box-shadow: 0 2px 5px rgb(0, 0, 0, .1);
-    }
-    .form input[type="submit"]:hover{
-    background-color: rgb(8, 80, 23);    
-    }
-    
-    .hide{
-        position: absolute;
-        transform: translateY(-300%);
-    }
-    /* reponsive */
-    @media screen and (max-width:750px) {
-        html{
-            font-size: 12px;
-        }
-        
-    }
-    @media screen and (max-width:580px) {
-        html{
-            font-size: 10px;
-        }
-        
-        .container-form{
-            height: auto;
-            flex-direction: column;
-        }
-    
-        .information{
-            width: 100%;
-            padding: 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0;
-    
-        }
-        .form-information{
-            width: 100%;
-            padding: 20px;
-            border-top-right-radius: 0;
-            border-bottom-left-radius: 20px;
-        }
-    }
+}

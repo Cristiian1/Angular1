@@ -7,13 +7,13 @@ header {
 }
 .logo {
   width: 80%;
-  
+
 }
 .logo:hover {
   cursor: pointer;
 }
 .desktop_menu {
-  margin-top: 10%;
+  margin-top: 8%;
 
 }
 .desktop_menu ul {
@@ -24,7 +24,7 @@ header {
   list-style-type: none;
   color: rgb(0, 0, 0);
   display: inline-block;
-  font-size: 18px;
+  font-size: 24px;
   margin-left: 26px;
 }
 .desktop_menu ul li:hover {
